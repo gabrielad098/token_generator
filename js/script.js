@@ -4,7 +4,8 @@ const text = 'abcdef1234';
 
 const textTab = ['a', 'b', 'c'];
 
-const inputl = document.querySelector('#inputl')
+const inputl = document.querySelector('#inputl');
+const InputMaxValue = 20;
 
 // console.log(text.length);
 
@@ -34,6 +35,12 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
 
-    document.querySelector('div').innerText = generateToken(inputl.value);
+    if(inputl.value <= InputMaxValue){
+        document.querySelector('div').innerText = generateToken(inputl.value);
+
+    } else{
+        document.querySelector('div').innerText = "Za duża ilość znaków - wpisz liczbę do 20";
+    }
+
 
 });
