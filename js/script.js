@@ -35,7 +35,7 @@ const generateToken = (length = 8) => {
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
-
+    
     if(inputl.value <= InputMaxValue){
         document.querySelector('div').innerText = generateToken(inputl.value);
     } if(inputl.value < InputMinValue){
