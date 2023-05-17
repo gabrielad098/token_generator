@@ -6,6 +6,7 @@ const textTab = ['a', 'b', 'c'];
 
 const inputl = document.querySelector('#inputl');
 const InputMaxValue = 20;
+const InputMinValue = 3;
 
 // console.log(text.length);
 
@@ -37,8 +38,9 @@ button.addEventListener('click', () => {
 
     if(inputl.value <= InputMaxValue){
         document.querySelector('div').innerText = generateToken(inputl.value);
-
-    } else{
+    } if(inputl.value < InputMinValue){
+        document.querySelector('div').innerText = "Za mała ilość znaków - wpisz liczbę od 3";
+    } if(inputl.value > InputMaxValue){
         document.querySelector('div').innerText = "Za duża ilość znaków - wpisz liczbę do 20";
     }
 
